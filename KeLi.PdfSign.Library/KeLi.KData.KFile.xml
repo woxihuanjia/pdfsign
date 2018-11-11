@@ -1,0 +1,669 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeLi.KData.KFile</name>
+    </assembly>
+    <members>
+        <member name="T:KeLi.KData.KFile.ExcelAssist">
+            <summary>
+            表格辅助
+            </summary>
+        </member>
+        <member name="T:KeLi.KData.KFile.ExcelAssist.Position">
+            <summary>
+            位置枚举
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ExcelAssist.Position.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ExcelAssist.Position.Right">
+            <summary>
+            右
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ExcelAssist.Position.Top">
+            <summary>
+            顶
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ExcelAssist.Position.Bottom">
+            <summary>
+            底
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ExcelAssist.Position.Diagonal">
+            <summary>
+            对角
+            </summary>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.ImportExcel``1(System.String,System.Int32)">
+            <summary>
+            导入表格
+            </summary>
+            <param name="filePath"></param>
+            <param name="sheetIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.ImportExcel``1(System.String,System.String)">
+            <summary>
+            导入表格
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filePath"></param>
+            <param name="sheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.ExportExcel(System.Windows.Forms.DataGridView,System.String,System.String)">
+            <summary>
+            导出表格
+            </summary>
+            <param name="dgvDefalut"></param>
+            <param name="filePath"></param>
+            <param name="sheetName"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.ExportExcel(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            导出表格
+            </summary>
+            <param name="table"></param>
+            <param name="filePath"></param>
+            <param name="sheetName"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.CalcValue(OfficeOpenXml.ExcelRange,System.String)">
+            <summary>
+            计算值
+            </summary>
+            <param name="range"></param>
+            <param name="formula"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetNumberformat(OfficeOpenXml.ExcelRange,System.String)">
+            <summary>
+            设置单元格数值格式
+            </summary>
+            <param name="range"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetAlign(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelHorizontalAlignment)">
+            <summary>
+            设置单元格水平对齐方式
+            </summary>
+            <param name="range"></param>
+            <param name="hAlign"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetAlign(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelVerticalAlignment)">
+            <summary>
+            设置单元格垂直对齐方式
+            </summary>
+            <param name="range"></param>
+            <param name="vAlign"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetAlign(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelHorizontalAlignment,OfficeOpenXml.Style.ExcelVerticalAlignment)">
+            <summary>
+            设置单元格对齐方式
+            </summary>
+            <param name="range"></param>
+            <param name="hAlign"></param>
+            <param name="vAlign"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetMerge(OfficeOpenXml.ExcelRange,System.Boolean)">
+            <summary>
+            合并单元格
+            </summary>
+            <param name="range"></param>
+            <param name="merge"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetWrapText(OfficeOpenXml.ExcelWorksheet,System.Boolean)">
+            <summary>
+            自动换行
+            </summary>
+            <param name="worksheet"></param>
+            <param name="wrap"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetWrapText(OfficeOpenXml.ExcelRange,System.Boolean)">
+            <summary>
+            自动换行
+            </summary>
+            <param name="range"></param>
+            <param name="wrap"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFont(OfficeOpenXml.ExcelWorksheet,System.Drawing.Color,System.String,System.Int32)">
+            <summary>
+            设置单元格字体样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="color"></param>
+            <param name="name"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFont(OfficeOpenXml.ExcelRange,System.Drawing.Color,System.String,System.Int32)">
+            <summary>
+            设置单元格字体样式
+            </summary>
+            <param name="range"></param>
+            <param name="color"></param>
+            <param name="name"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFill(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFill(OfficeOpenXml.ExcelWorksheet,System.Drawing.Color)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFill(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFill(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelFillStyle)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFill(OfficeOpenXml.ExcelRange,System.Drawing.Color)">
+            <summary>
+            设置单元格填充背景色
+            </summary>
+            <param name="range"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFill(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorder(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorder(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorder(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorder(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorderItem(OfficeOpenXml.ExcelWorksheet,KeLi.KData.KFile.ExcelAssist.Position,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            单独设置单元格某边边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorderItem(OfficeOpenXml.ExcelWorksheet,KeLi.KData.KFile.ExcelAssist.Position,System.Drawing.Color)">
+            <summary>
+            单独设置单元格某边边框颜色
+            </summary>
+            <param name="worksheet"></param>
+            <param name="position"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorderItem(OfficeOpenXml.ExcelWorksheet,KeLi.KData.KFile.ExcelAssist.Position,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格某边边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorderItem(OfficeOpenXml.ExcelRange,KeLi.KData.KFile.ExcelAssist.Position,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            单独设置单元格某边边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorderItem(OfficeOpenXml.ExcelRange,KeLi.KData.KFile.ExcelAssist.Position,System.Drawing.Color)">
+            <summary>
+            单独设置单元格某边边框颜色
+            </summary>
+            <param name="range"></param>
+            <param name="position"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBorderItem(OfficeOpenXml.ExcelRange,KeLi.KData.KFile.ExcelAssist.Position,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格某边边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetShrink(OfficeOpenXml.ExcelWorksheet,System.Boolean)">
+            <summary>
+            设置单元格文字伸缩适应单元格大小
+            </summary>
+            <param name="worksheet"></param>
+            <param name="shrink"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetShrink(OfficeOpenXml.ExcelRange,System.Boolean)">
+            <summary>
+            设置单元格文字伸缩适应单元格大小
+            </summary>
+            <param name="range"></param>
+            <param name="shrink"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFit(OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            设置单元格伸缩适应单元格文字长度
+            </summary>
+            <param name="worksheet"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFit(OfficeOpenXml.ExcelWorksheet,System.Double)">
+            <summary>
+            设置单元格伸缩适应单元格文字长度
+            </summary>
+            <param name="worksheet"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFit(OfficeOpenXml.ExcelRange,System.Boolean)">
+            <summary>
+            设置单元格伸缩适应单元格文字长度
+            </summary>
+            <param name="range"></param>
+            <param name="fit"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFit(OfficeOpenXml.ExcelColumn)">
+            <summary>
+            设置表格列伸缩适应单元格文字长度
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetFit(OfficeOpenXml.ExcelColumn,System.Double)">
+            <summary>
+            设置表格列伸缩适应单元格文字长度
+            </summary>
+            <param name="column"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetDefaultHeight(OfficeOpenXml.ExcelWorksheet,System.Int32)">
+            <summary>
+            设置默认行高
+            </summary>
+            <param name="worksheet"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetDefaultWidth(OfficeOpenXml.ExcelWorksheet,System.Int32)">
+            <summary>
+            设置默认列宽
+            </summary>
+            <param name="worksheet"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetRowHeight(OfficeOpenXml.ExcelRow,System.Int32)">
+            <summary>
+            设置行高
+            </summary>
+            <param name="row"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetColumnWidth(OfficeOpenXml.ExcelColumn,System.Int32)">
+            <summary>
+            设置列宽
+            </summary>
+            <param name="col"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBackground(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Image,System.Boolean)">
+            <summary>
+            设置背景
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="img"></param>
+            <param name="showLines"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBackground(OfficeOpenXml.ExcelWorksheet,System.Drawing.Color,System.Drawing.Image,System.Boolean)">
+            <summary>
+            设置背景
+            </summary>
+            <param name="worksheet"></param>
+            <param name="color"></param>
+            <param name="img"></param>
+            <param name="showLines"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetBackground(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Color,System.Drawing.Image,System.Boolean)">
+            <summary>
+            设置背景
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+            <param name="img"></param>
+            <param name="showLines"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetPicture(OfficeOpenXml.ExcelWorksheet,System.String,System.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            插入图片
+            </summary>
+            <param name="worksheet"></param>
+            <param name="name"></param>
+            <param name="img"></param>
+            <param name="px"></param>
+            <param name="py"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetLink(OfficeOpenXml.ExcelWorksheet,System.String,System.Drawing.Image,System.String)">
+            <summary>
+            给图片加超链接
+            </summary>
+            <param name="worksheet"></param>
+            <param name="link"></param>
+            <param name="img"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetCellLink(OfficeOpenXml.ExcelWorksheet,System.String)">
+            <summary>
+            给单元格加超链接
+            </summary>
+            <param name="worksheet"></param>
+            <param name="link"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetCellLink(OfficeOpenXml.ExcelRange,System.String)">
+            <summary>
+            给单元格加超链接
+            </summary>
+            <param name="range"></param>
+            <param name="link"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetHiddent(OfficeOpenXml.ExcelWorksheet,System.Boolean)">
+            <summary>
+            隐藏工作表
+            </summary>
+            <param name="worksheet"></param>
+            <param name="hidden"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetRowHiddent(OfficeOpenXml.ExcelWorksheet,System.Int32,System.Boolean)">
+            <summary>
+            隐藏某一行
+            </summary>
+            <param name="worksheet"></param>
+            <param name="row"></param>
+            <param name="hidden"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.ExcelAssist.SetColHiddent(OfficeOpenXml.ExcelWorksheet,System.Int32,System.Boolean)">
+            <summary>
+            隐藏某一列
+            </summary>
+            <param name="worksheet"></param>
+            <param name="col"></param>
+            <param name="hidden"></param>
+        </member>
+        <member name="T:KeLi.KData.KFile.PdfConverter">
+            <summary>
+            PDF转换器
+            </summary>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+            <param name="startNum"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String,System.Int32,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+            <param name="startNum"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+            <param name="startNum"></param>
+            <param name="endNum"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String,System.Int32,System.Int32,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+            <param name="startNum"></param>
+            <param name="endNum"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String,System.Int32,System.Int32,KeLi.KData.KFile.ResolutionLvl)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+            <param name="startNum"></param>
+            <param name="endNum"></param>
+            <param name="lvl"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ToImages(System.String,System.String,System.String,System.Int32,System.Int32,KeLi.KData.KFile.ResolutionLvl,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="dirPath"></param>
+            <param name="imgName"></param>
+            <param name="startNum"></param>
+            <param name="endNum"></param>
+            <param name="lvl"></param>
+            <param name="format"></param>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.GetPdfSize(System.String)">
+            <summary>
+            获取文件的页面大小
+            </summary>
+            <param name="pdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.SplitedPdfs(System.String,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            拆分到多个文件的名称列表
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdfs"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.CopyPdf(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            复制指定页码范围的文件并另存
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+            <param name="startPage"></param>
+            <param name="endPage"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ExtractPdf(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            抽取指定页码范围的文件并另存
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+            <param name="startPage"></param>
+            <param name="endPage"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.ExtractPdf(System.String,System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            抽取指定页面的文件并另存
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+            <param name="extractPages"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.GetPageMark(iTextSharp.text.pdf.PdfReader)">
+            <summary>
+            获取页面书签
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.HandlePara(System.String,System.String)">
+            <summary>
+            处理参数
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+        </member>
+        <member name="M:KeLi.KData.KFile.PdfConverter.HandlePara(System.String,System.String,System.Int32@,System.Int32@,iTextSharp.text.pdf.PdfReader)">
+            <summary>
+            处理参数
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+            <param name="startPage"></param>
+            <param name="endPage"></param>
+            <param name="reader"></param>
+        </member>
+        <member name="T:KeLi.KData.KFile.ResolutionLvl">
+            <summary>
+            清晰度等级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.One">
+            <summary>
+            一级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Two">
+            <summary>
+            二级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Three">
+            <summary>
+            三级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Four">
+            <summary>
+            四级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Five">
+            <summary>
+            五级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Six">
+            <summary>
+            六级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Seven">
+            <summary>
+            七级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Eight">
+            <summary>
+            八级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Nine">
+            <summary>
+            九级
+            </summary>
+        </member>
+        <member name="F:KeLi.KData.KFile.ResolutionLvl.Ten">
+            <summary>
+            十级
+            </summary>
+        </member>
+    </members>
+</doc>

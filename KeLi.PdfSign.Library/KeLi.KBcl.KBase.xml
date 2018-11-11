@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeLi.KBcl.KBase</name>
+    </assembly>
+    <members>
+        <member name="T:KeLi.KBcl.KBase.ArgCtrl">
+            <summary>
+            参数控制器
+            </summary>
+        </member>
+        <member name="M:KeLi.KBcl.KBase.ArgCtrl.PassHurdle(System.Object[])">
+            <summary>
+            能否通过参数预判
+            </summary>
+            <param name="hurdles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.KBcl.KBase.ArgCtrl.ToType``1(System.Object)">
+            <summary>
+            验证类型转换
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.KBcl.KBase.ExHandle">
+            <summary>
+            异常信息处理
+            </summary>
+        </member>
+        <member name="M:KeLi.KBcl.KBase.ExHandle.GetNullExp(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            空指针异常
+            </summary>
+            <param name="param"></param>
+            <param name="name"></param>
+            <param name="path"></param>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.KBcl.KBase.ExHandle.GetInvalidExp(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            无效异常
+            </summary>
+            <param name="param"></param>
+            <param name="name"></param>
+            <param name="path"></param>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.KBcl.KBase.LogAssist">
+            <summary>
+            日志辅助
+            </summary>
+        </member>
+        <member name="M:KeLi.KBcl.KBase.LogAssist.WriteLog(System.Object)">
+            <summary>
+            写日志
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>
