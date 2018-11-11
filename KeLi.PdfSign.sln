@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeLi.PdfSign.App", "KeLi.PdfSign.App\KeLi.PdfSign.App.csproj", "{FC39CED5-8AF5-4C3B-8E15-B1B577D109B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC39CED5-8AF5-4C3B-8E15-B1B577D109B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC39CED5-8AF5-4C3B-8E15-B1B577D109B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC39CED5-8AF5-4C3B-8E15-B1B577D109B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC39CED5-8AF5-4C3B-8E15-B1B577D109B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E29B06E-4B4F-4D5E-98C5-0E781A0B8AA5}
+	EndGlobalSection
+EndGlobal
