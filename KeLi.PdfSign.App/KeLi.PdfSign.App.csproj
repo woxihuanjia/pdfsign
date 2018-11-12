@@ -33,21 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="itextsharp, Version=5.5.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    <Reference Include="itextsharp">
+      <HintPath>..\KeLi.PdfSign.Library\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="KeLi.KBcl.KBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\KeLi.KBcl.KBase.dll</HintPath>
+    <Reference Include="KeLi.KBcl.KBase">
+      <HintPath>..\KeLi.PdfSign.Library\KeLi.KBcl.KBase.dll</HintPath>
     </Reference>
-    <Reference Include="KeLi.KData.KFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\KeLi.KData.KFile.dll</HintPath>
+    <Reference Include="KeLi.KData.KFile">
+      <HintPath>..\KeLi.PdfSign.Library\KeLi.KData.KFile.dll</HintPath>
     </Reference>
-    <Reference Include="O2S.Components.PDFRender4NET, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\O2S.Components.PDFRender4NET.dll</HintPath>
+    <Reference Include="O2S.Components.PDFRender4NET">
+      <HintPath>..\KeLi.PdfSign.Library\O2S.Components.PDFRender4NET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,7 +58,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="ThoughtWorks.QRCode, Version=1.0.4778.30637, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+      <HintPath>..\KeLi.PdfSign.Library\ThoughtWorks.QRCode.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
